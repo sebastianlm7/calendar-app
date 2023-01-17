@@ -124,7 +124,10 @@ const crearUsuario = async(req,res = response) => { //req: lo que solicita el us
     res.json({
             
             ok: true,
+            uid,
+            name,
             token,
+
         
         })
     
