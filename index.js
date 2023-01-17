@@ -30,6 +30,9 @@ app.use( express.json( )); //voy a procesar acá las peticiones que vengan con f
 app.use('/api/auth', require('./routes/auth')); 
 app.use('/api/events', require('./routes/events')); 
 
+app.get('*', (req, res)=> { //comodin de las rutas por si no es ni la publica ni las dos que estan Rutas
+    res.sendFile(__dirname + '/public/index.html')
+})
 
 
 
